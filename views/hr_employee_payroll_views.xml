@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Employee Form and Add Payroll Fields -->
+    <record id="hr_employee_view_form_payroll" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.payroll</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Payroll">
+                    <group name="payroll_info">
+                        <field name="schedule_pay"/>
+                        <field name="payroll_struct_id" required="1"/>
+                        <field name="resource_calendar_id"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <!-- Inherit Employee Tree/List View -->
+    <record id="hr_employee_view_tree_payroll" model="ir.ui.view">
+        <field name="name">hr.employee.view.tree.payroll</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='work_email']" position="after">
+                <field name="payroll_struct_id"/>
+                <field name="schedule_pay"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
