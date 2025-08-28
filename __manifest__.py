@@ -27,8 +27,7 @@ Features:
         "hr_holidays",
     ],
     "data": [
-        "security/hr_payroll_security.xml",
-        "security/ir.model.access.csv",
+        "security/ir.model.access.csv",   # access rights first
         "data/hr_payroll_sequence.xml",
         "data/hr_payroll_data.xml",
         "wizard/hr_payroll_payslips_by_employees_views.xml",
@@ -43,6 +42,7 @@ Features:
         "views/report_contributionregister_templates.xml",
         "views/report_payslip_templates.xml",
         "views/report_payslipdetails_templates.xml",
+        "security/hr_payroll_security.xml",  # security rules last (needs models)
     ],
     "demo": ["data/hr_payroll_demo.xml"],
     "application": True,
