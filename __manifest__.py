@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of BrowseInfo. See LICENSE file for full copyright and licensing details.
 {
-    "name": "HR Payroll Community Edition",
+    "name": "community_edition_payroll",
     "version": "18.0.1.0.0",
     "category": "Human Resources",
     "license": "LGPL-3",
