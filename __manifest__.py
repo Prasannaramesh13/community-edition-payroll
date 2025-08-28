@@ -25,6 +25,7 @@ Features:
     "depends": [
         "hr",
         "hr_holidays",
+        "hr_contract",
     ],
     "data": [
         "security/ir.model.access.csv",   # access rights first
